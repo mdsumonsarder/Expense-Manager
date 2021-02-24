@@ -31,4 +31,22 @@ public class MasterController {
     }
 
 
+    @RequestMapping("/expense")
+    public ModelAndView addexpense()
+    {
+        ModelAndView mav = new ModelAndView("expense");
+        mav.addObject("expense",new Expense());
+        return mav;
+    }
+
+
+   /* @RequestMapping(value = "/expense",method = RequestMethod.POST)
+    public String save(@ModelAttribute("expense") Expense expense)
+    {
+        expenseService.save(expense);
+        return "redirect:/";
+    }*/
+
+
+
 }

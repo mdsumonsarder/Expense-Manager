@@ -1,4 +1,5 @@
 <%@ taglib prefix = "c"  uri = "http://java.sun.com/jsp/jstl/core" %>
+<c:set var="contexRoot" value="${pageContext.request.contextPath}"/>
 <html>
 <head>
     <title>home</title>
@@ -8,13 +9,15 @@
       <h1>Expense Tracker</h1>
       <p>${message}</p>
 
-<c:forEach var="expenses" items="${expenses}">
+      <a href="${contexRoot}/expense">Add Expense</a>
 
+
+<c:forEach var="expenses" items="${expenses}">
     <div>
         <h3>${expenses.expensename}</h3>
-        <p>${expenses.amount}</p>
-    </div>
+        <p>&#8377;${expenses.amount}</p>
 
+    </div>
 </c:forEach>
 
 </body>
