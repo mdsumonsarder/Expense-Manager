@@ -19,8 +19,11 @@ public class ExpenseServiceImp implements ExpenseService{
         return expenseRepository.findAll();
     }
 
+
     @Override
     public void save(Expense expense) {
+        expense.setCreatedAt(System.currentTimeMillis());
+        expenseRepository.save(expense);
 
     }
 }

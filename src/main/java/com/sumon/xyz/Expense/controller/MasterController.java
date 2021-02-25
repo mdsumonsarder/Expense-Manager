@@ -40,12 +40,12 @@ public class MasterController {
     }
 
 
-   /* @RequestMapping(value = "/expense",method = RequestMethod.POST)
+    @RequestMapping(value = "/expense",method = RequestMethod.POST)
     public String save(@ModelAttribute("expense") Expense expense)
     {
         expenseService.save(expense);
         return "redirect:/";
-    }*/
+    }
 
 
 
