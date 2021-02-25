@@ -12,12 +12,12 @@
       <a href="${contexRoot}/expense">Add Expense</a>
 
 
-<c:forEach var="expenses" items="${expenses}">
+<c:forEach var="expense" items="${expense}">
     <div>
 
-        <h3>${expenses.expensename}</h3>
-        <p>&#8377;${expenses.amount}</p>
-        <a href="${contexRoot}/expense/${expenses.id}">Edit</a>
+        <h3>${expense.expensename}</h3>
+        <p>&#8377;${expense.amount}</p>
+        <a href="${contexRoot}/expense/${expense.id}">Edit</a>
     </div>
 </c:forEach>
 

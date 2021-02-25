@@ -21,6 +21,6 @@
 
 </form:form>
 
-
+<a href="${contexRoot}/expense/${expense.id}/delete">Delete</a>
 </body>
 </html>

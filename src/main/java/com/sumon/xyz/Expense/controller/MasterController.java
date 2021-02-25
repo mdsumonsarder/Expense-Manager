@@ -23,9 +23,9 @@ public class MasterController {
         //addObject method is send message controller to jsp file;
         mav.addObject("message","List of expenses");
 
-        List<Expense> expenses = expenseService.findAll();
+        List<Expense> expense = expenseService.findAll();
         //System.out.println(expenses);
-        mav.addObject("expenses",expenses);
+        mav.addObject("expense",expense);
 
         return mav;
     }
@@ -55,6 +55,15 @@ public class MasterController {
         Expense expense = expenseService.findById(id);
         mav.addObject("expense",expense);
         return mav;
+    }
+
+
+
+    @RequestMapping(value = "/expense/{id}/delete")
+    public String delete(@PathVariable("id") Long id)
+    {
+       expenseService.delete(id);
+        return "redirect:/";
     }
 
 
