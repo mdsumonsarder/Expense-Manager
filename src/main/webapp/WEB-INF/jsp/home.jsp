@@ -14,9 +14,10 @@
 
 <c:forEach var="expenses" items="${expenses}">
     <div>
+
         <h3>${expenses.expensename}</h3>
         <p>&#8377;${expenses.amount}</p>
-
+        <a href="${contexRoot}/expense/${expenses.id}">Edit</a>
     </div>
 </c:forEach>
 

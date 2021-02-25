@@ -48,5 +48,15 @@ public class MasterController {
     }
 
 
+    @RequestMapping(value = "/expense/{id}")
+    public ModelAndView edit(@PathVariable("id") Long id)
+    {
+        ModelAndView mav = new ModelAndView("expense");
+        Expense expense = expenseService.findById(id);
+        mav.addObject("expense",expense);
+        return mav;
+    }
+
+
 
 }

@@ -12,6 +12,7 @@
 
 <form:form action="${contexRoot}/expense" method="post" modelAttribute="expense">
 
+    <form:hidden path="id"/>
    <form:input path="expensename" placeholder="Enter Expense Name"/>
     <form:input path="amount" placeholder="Enter Expense Amount"/>
     <form:input path="note" placeholder="Enter Expense Note (Optional)"/>
